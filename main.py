@@ -1,6 +1,10 @@
 import random
 
-MAX_TRIES = 3
+MAX_TRIES = 10
+
+RED = "\033[91m"
+GREEN = "\033[92m"
+ENDC = "\033[0m"
 
 def try_again():
     print("Would you like to try again?\n")
@@ -20,12 +24,12 @@ def start_game():
         guess = int(input("Enter a guess: "))
 
         if guess == random_int:
-            print("\nYou have guessed the right number, You won!\n")
+            print(GREEN + "\nYou have guessed the right number, You won!\n" + ENDC)
             try_again()
             break
         else:
             tries -= 1
-            print("\nYou have guessed wrong, try again!\n")
+            print(RED + "\nYou have guessed wrong, try again!\n" + ENDC)
             print(f"You have {tries} tries left!\n")
 
     if tries == 0:

@@ -26,7 +26,6 @@ def start_game():
         else:
             tries -= 1
             print("\nYou have guessed wrong, try again!\n")
-            print(f"{random_int}")
             print(f"You have {tries} tries left!\n")
 
     if tries == 0:

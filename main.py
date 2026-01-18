@@ -4,8 +4,8 @@ MAX_TRIES = 10
 
 RED = "\033[91m"
 GREEN = "\033[92m"
-ENDC = "\033[0m"
 YELLOW = "\033[93m"
+ENDC = "\033[0m"
 
 def try_again():
     print("Would you like to try again?\n")

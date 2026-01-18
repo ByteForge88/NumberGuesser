@@ -5,6 +5,7 @@ MAX_TRIES = 10
 RED = "\033[91m"
 GREEN = "\033[92m"
 ENDC = "\033[0m"
+YELLOW = "\033[93m"
 
 def try_again():
     print("Would you like to try again?\n")
@@ -33,7 +34,8 @@ def start_game():
             print(f"You have {tries} tries left!\n")
 
     if tries == 0:
-        print("You ran out of tries, Better luck next time!\n")
+        print(YELLOW + "You ran out of tries, Better luck next time!\n" + ENDC)
+        print("The correct answer was " + str(random_int) + "\n")
 
 def main():
     print("\nWelcome to the guesser name!\n")
